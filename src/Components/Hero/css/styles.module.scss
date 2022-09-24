@@ -1,0 +1,217 @@
+@font-face {
+    font-family: monteserrat;
+    src: url('../../../Fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+.hero {
+    background: url('../bitmap@2x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+
+    .inner {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 3rem;
+            color: #cfb995;
+            font-family: monteserrat;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.45rem;
+            color: #fff;
+            font-family: monteserrat;
+            margin: .5rem 0;
+            text-align: center;
+        }
+
+        .error {
+            font-family: monteserrat;
+            display: block;
+            color: red;
+            margin: .5rem 0;
+            font-size: .8rem;
+            position: relative;
+        }
+
+        .box {
+            width: 40%;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        form {
+
+            display: flex;
+            width: 100%;
+            background: blue;
+            border-radius: 5px;
+            padding: .5rem;
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            position: relative;
+            z-index: 5;
+
+            &:hover {
+                background: #fff;
+                color: #000;
+            }
+
+
+            input {
+                width: 90%;
+                border: none;
+                background: none;
+                outline: none;
+                // color: #fff;
+                font-size: 1.2rem;
+                font-family: monteserrat;
+
+                &::placeholder {
+                    color: #fff;
+                    font-size: 1.2rem;
+                    font-family: monteserrat;
+                }
+            }
+
+            button {
+                width: 10%;
+                background: none;
+                border: none;
+                color: #fff;
+
+                img {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    object-fit: contain;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                    transition: all .5ms all ease;
+                }
+            }
+        }
+
+        .suggestions {
+            width: 100%;
+            margin-top: 1rem;
+            background: #fff;
+            border-radius: 5px;
+            padding: .5rem 1rem;
+            position: absolute;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            li {
+                cursor: pointer;
+                margin: .5rem 0;
+                list-style: none;
+                font-size: 1rem;
+                font-family: monteserrat;
+            }
+
+            .error {
+                text-align: center;
+                font-size: 1.2rem;
+                color: red;
+                font-family: monteserrat;
+            }
+
+            z-index: 5;
+        }
+
+        .invincible {
+            position: fixed;
+            inset: 0;
+            background: transparent;
+            z-index: 1;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .hero {
+        .inner {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            form {
+
+
+                input {
+                    font-size: 1rem;
+
+                    &::placeholder {
+                        font-size: 1rem;
+                    }
+
+                }
+
+                button {
+
+                    img {
+                        height: 1.2rem;
+                        width: 1.2rem;
+                    }
+                }
+            }
+
+            .suggestions {
+
+                li {
+                    font-size: .875rem;
+                }
+
+                .error {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero {
+        .inner {
+            .box {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:639px) {
+    .hero {
+        .inner {
+            .box {
+                width: 100%;
+
+                form {
+                    input {
+                        font-size: .8rem;
+
+                        &::placeholder {
+                            font-size: .8rem;
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}

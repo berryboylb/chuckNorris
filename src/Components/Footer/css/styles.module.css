@@ -1,0 +1,54 @@
+@font-face {
+  font-family: monteserrat;
+  src: url("../../../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+.footer {
+  margin-top: 2rem;
+  background: url("../bitmap_2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 0;
+  font-family: monteserrat;
+}
+.footer h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.footer button {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: #cfb995;
+}
+.footer button img {
+  height: 1.2rem;
+  width: 1.2rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 0.5rem;
+}
+.footer button:hover {
+  opacity: 0.8;
+  transition: all 0.5ms ease-in;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer h1 {
+    font-size: 1.2rem;
+  }
+  .footer button {
+    font-size: 1rem;
+  }
+  .footer button img {
+    height: 1rem;
+    width: 1rem;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

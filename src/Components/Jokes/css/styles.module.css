@@ -1,0 +1,155 @@
+@font-face {
+  font-family: monteserrat;
+  src: url("../../../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+.jokes {
+  margin: 2rem 0;
+}
+.jokes .category {
+  font-family: monteserrat;
+  font-size: 0.8rem;
+  background: #cfb995;
+  display: inline;
+  padding: 0.2rem 1.2rem;
+  border-radius: 15px;
+  color: #fff;
+  margin-top: -0.5rem;
+  text-transform: uppercase;
+}
+.jokes .error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+  font-family: monteserrat;
+}
+.jokes hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+.jokes .grid {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.jokes .grid .joke {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  height: 290px;
+  position: relative;
+}
+.jokes .grid .joke:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.jokes .grid .joke .jokebox {
+  font-family: monteserrat;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.jokes .grid .joke .jokebox .pointer {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  color: #ffdf5b;
+}
+.jokes .grid .joke .value {
+  margin-top: 0.5rem;
+  font-family: monteserrat;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.jokes .grid .joke .link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #cfb995;
+}
+.jokes .grid .joke .link:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease-in;
+}
+.jokes .grid .joke .link img {
+  margin-left: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.jokes .views {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.jokes .views button {
+  background: none;
+  border: 1px solid #cfb995;
+  color: #cfb995;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.jokes .views button:hover {
+  opacity: 0.7;
+  transition: all 0.5ms ease-in;
+}
+.jokes .views button img {
+  height: 1.2rem;
+  width: 1.2rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 1rem;
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 1024px) {
+  .jokes .category {
+    font-size: 0.75rem;
+  }
+  .jokes .error {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  .jokes .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .jokes .grid .joke {
+    height: 280px;
+  }
+  .jokes .grid .joke .jokebox {
+    font-size: 0.8rem;
+  }
+  .jokes .grid .joke .jokebox .pointer {
+    font-size: 0.8rem;
+  }
+  .jokes .grid .joke .value {
+    font-size: 0.75rem;
+    line-height: 2;
+  }
+  .jokes .grid .joke .link {
+    font-size: 0.8rem;
+  }
+  .jokes .grid .joke .link img {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+}
+@media screen and (max-width: 639px) {
+  .jokes .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .jokes .grid .joke {
+    height: auto;
+  }
+  .jokes .grid .joke .value {
+    margin-bottom: 1.2rem;
+  }
+  .jokes .grid .joke .link {
+    text-align: right;
+    display: block;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,271 @@
+@font-face {
+  font-family: monteserrat;
+  src: url("../../../Fonts/Montserrat/Montserrat-SemiBold.ttf");
+  font-weight: 500;
+}
+.nav {
+  background-color: #5e5e5e;
+  width: 100%;
+}
+.nav .inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.nav .inner .navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.nav .inner .navLinks .list {
+  margin-right: 1rem;
+  font-size: 1rem;
+  list-style: none;
+  font-family: monteserrat;
+}
+.nav .inner .navLinks .list a {
+  display: block;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.nav .inner .navLinks .list a:hover {
+  background: #d0ba93;
+  transition: all 0.5ms ease-in;
+}
+.nav .inner .navLinks .listEnd {
+  text-transform: uppercase;
+  font-size: 1rem;
+  list-style: none;
+  font-family: monteserrat;
+  padding: 1.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav .inner .navLinks .listEnd img {
+  height: 1rem;
+  width: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.nav .inner .navLinks .listEnd .persona {
+  margin-right: 0.5rem;
+}
+.nav .inner .navLinks .listEnd .arrow {
+  margin-left: 0.5rem;
+}
+.nav .inner .navLinks .listEnd:hover {
+  background: #d0ba93;
+  transition: all 0.5ms ease-in;
+}
+.nav .inner .navLinks .links {
+  z-index: 5;
+  position: absolute;
+  top: 4.5rem;
+  background: #fff;
+  right: 0;
+  left: 0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+}
+.nav .inner .navLinks .links a {
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  display: block;
+  font-size: 0.875rem;
+  width: 100%;
+  text-decoration: none;
+  color: #5e5e5e;
+  border-bottom: 1px solid #5e5e5e;
+}
+.nav .inner .navLinks .links a:hover {
+  color: #d0ba93;
+  border-bottom: 1px solid #d0ba93;
+  transition: all 0.5ms ease-in;
+}
+.nav .inner .navLinks .links a:last-child {
+  border: none;
+}
+.nav .inner .navLinks .invincible {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 1;
+}
+.nav .inner .navActive {
+  position: absolute;
+  right: 0;
+  height: auto;
+  top: 0;
+  background: #5e5e5e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.5s ease-in;
+  z-index: 4;
+}
+.nav .inner .navActive .list {
+  margin-right: 0rem;
+  font-size: 1rem;
+  list-style: none;
+  font-family: monteserrat;
+}
+.nav .inner .navActive .list a {
+  display: block;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.nav .inner .navActive .list a:hover {
+  background: #d0ba93;
+  transition: all 0.5ms ease-in;
+}
+.nav .inner .navActive .listEnd {
+  text-transform: uppercase;
+  font-size: 1rem;
+  list-style: none;
+  font-family: monteserrat;
+  padding: 1.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav .inner .navActive .listEnd img {
+  height: 1rem;
+  width: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.nav .inner .navActive .listEnd .persona {
+  margin-right: 0.5rem;
+}
+.nav .inner .navActive .listEnd .arrow {
+  margin-left: 0.5rem;
+}
+.nav .inner .navActive .listEnd:hover {
+  background: #d0ba93;
+  transition: all 0.5ms ease-in;
+}
+.nav .inner .navActive .links {
+  z-index: 5;
+  position: absolute;
+  background: #fff;
+  top: 2.5rem;
+  right: 0;
+  left: 0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+}
+.nav .inner .navActive .links a {
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  display: block;
+  font-size: 0.875rem;
+  width: 100%;
+  text-decoration: none;
+  color: #5e5e5e;
+  border-bottom: 1px solid #5e5e5e;
+}
+.nav .inner .navActive .links a:hover {
+  color: #d0ba93;
+  border-bottom: 1px solid #d0ba93;
+  transition: all 0.5ms ease-in;
+}
+.nav .inner .navActive .links a:last-child {
+  border: none;
+}
+.nav .inner .navActive .links .invincible {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+.nav .inner .burger {
+  display: none;
+  cursor: pointer;
+  z-index: 99;
+}
+.nav .inner .burger .line0 {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.nav .inner .burger .line1 {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.nav .inner .burger .line2 {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.nav .inner .bro {
+  display: none;
+  cursor: pointer;
+  z-index: 99;
+}
+.nav .inner .bro .line0 {
+  width: 30px;
+  height: 2px;
+  margin: 5px;
+  border-radius: 8px;
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.nav .inner .bro .line1 {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.nav .inner .bro .line2 {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  transform: rotate(42deg) translate(-3.5px, -5.5px);
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav .inner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .nav .inner .navLinks {
+    display: none;
+  }
+  .nav .inner .navLinks li {
+    opacity: 0;
+    margin-top: 0;
+  }
+  .nav .inner .burger,
+.nav .inner .bro {
+    display: block;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

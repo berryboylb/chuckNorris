@@ -1,0 +1,182 @@
+@font-face {
+  font-family: monteserrat;
+  src: url("../../../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+.hero {
+  background: url("../bitmap@2x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+}
+.hero .inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .inner h1 {
+  font-size: 3rem;
+  color: #cfb995;
+  font-family: monteserrat;
+  font-weight: 300;
+  text-align: center;
+}
+.hero .inner p {
+  font-size: 1.45rem;
+  color: #fff;
+  font-family: monteserrat;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.hero .inner .error {
+  font-family: monteserrat;
+  display: block;
+  color: red;
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  position: relative;
+}
+.hero .inner .box {
+  width: 40%;
+  margin-top: 1rem;
+  position: relative;
+}
+.hero .inner form {
+  display: flex;
+  width: 100%;
+  background: blue;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+}
+.hero .inner form:hover {
+  background: #fff;
+  color: #000;
+}
+.hero .inner form input {
+  width: 90%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: monteserrat;
+}
+.hero .inner form input::-moz-placeholder {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: monteserrat;
+}
+.hero .inner form input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: monteserrat;
+}
+.hero .inner form input::placeholder {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: monteserrat;
+}
+.hero .inner form button {
+  width: 10%;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.hero .inner form button img {
+  height: 1.5rem;
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.hero .inner form button:hover {
+  opacity: 0.7;
+  transition: all 0.5ms all ease;
+}
+.hero .inner .suggestions {
+  width: 100%;
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 5;
+}
+.hero .inner .suggestions li {
+  cursor: pointer;
+  margin: 0.5rem 0;
+  list-style: none;
+  font-size: 1rem;
+  font-family: monteserrat;
+}
+.hero .inner .suggestions .error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+  font-family: monteserrat;
+}
+.hero .inner .invincible {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero .inner h1 {
+    font-size: 2rem;
+  }
+  .hero .inner p {
+    font-size: 1.2rem;
+  }
+  .hero .inner form input {
+    font-size: 1rem;
+  }
+  .hero .inner form input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .hero .inner form input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .hero .inner form input::placeholder {
+    font-size: 1rem;
+  }
+  .hero .inner form button img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .hero .inner .suggestions li {
+    font-size: 0.875rem;
+  }
+  .hero .inner .suggestions .error {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .inner .box {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .hero .inner .box {
+    width: 100%;
+  }
+  .hero .inner .box form input {
+    font-size: 0.8rem;
+  }
+  .hero .inner .box form input::-moz-placeholder {
+    font-size: 0.8rem;
+  }
+  .hero .inner .box form input:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .hero .inner .box form input::placeholder {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

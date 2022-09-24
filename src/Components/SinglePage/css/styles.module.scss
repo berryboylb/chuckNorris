@@ -1,0 +1,437 @@
+@font-face {
+    font-family: monteserrat;
+    src: url('../../../Fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: monteserratSemi;
+    src: url('../../../Fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+.singlePage {
+    margin: 2rem 0;
+
+    .error {
+        text-align: center;
+        font-size: 1.2rem;
+        color: red;
+        font-family: monteserrat;
+    }
+
+    .back {
+        margin: 1rem 0;
+        position: relative;
+        display: block;
+
+        button {
+            background: url("../blob.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 10rem;
+            width: 4.5rem;
+            border: none;
+            color: #cfb995;
+            font-size: 1rem;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .jokeBox {
+            width: 67%;
+
+            .joke {
+                padding: 1rem;
+                border: 1px solid #ddd;
+                background: #fff;
+
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                }
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .category {
+                        font-family: monteserrat;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        background: #57dbe6;
+                        padding: .5rem 1rem;
+                        color: #fff;
+                        border-radius: 15px;
+
+                        span {
+                            margin-right: .2rem;
+                        }
+                    }
+
+                    .trend {
+                        font-family: monteserrat;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        color: #ff915b;
+                    }
+                }
+
+                .titleCon {
+                    margin-top: 1rem;
+                    display: flex;
+                    align-items: flex-end;
+
+                    .title {
+                        font-family: monteserratSemi;
+                        font-size: 2.5rem;
+                        text-transform: capitalize;
+                        color: #d0ba93;
+                    }
+
+                    hr {
+                        width: 30%;
+                        margin-left: .5rem;
+                        border: none;
+                        border-bottom: 2px solid #d0ba93;
+                    }
+
+                    h5 {
+                        font-family: monteserrat;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        color: #d0ba93;
+                        margin-left: .5rem;
+                    }
+                }
+
+                .value {
+                    margin-top: 1rem;
+                    font-family: monteserrat;
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                }
+            }
+
+            .action {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                .actionType {
+                    display: flex;
+                    align-items: center;
+
+                    .like {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        &:hover {
+                            opacity: 0.7;
+                            transition: all .5ms ease-in;
+                        }
+
+                        button {
+                            border: none;
+                            border-radius: 50%;
+                            background: darkgreen;
+                            color: #fff;
+                            width: 50px;
+                            height: 50px;
+
+                            img {
+                                height: 1.5rem;
+                                width: 1.5rem;
+                                object-fit: contain;
+                            }
+                        }
+
+                        h3 {
+                            font-family: monteserrat;
+                            font-size: .8rem;
+                            color: darkgreen;
+                        }
+                    }
+
+                    .unLike {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-left: 1rem;
+
+                        button {
+                            border: none;
+                            border-radius: 50%;
+                            background: red;
+                            color: #fff;
+                            width: 50px;
+                            height: 50px;
+
+                            img {
+                                height: 1.5rem;
+                                width: 1.5rem;
+                                object-fit: contain;
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        h3 {
+                            font-family: monteserrat;
+                            font-size: .8rem;
+                            color: red;
+                        }
+                    }
+                }
+            }
+
+            .change {
+                button {
+                    padding: 1rem 1.5rem;
+                    border: 1px solid #ddd;
+                    background: #fff;
+                    color: #cfb995;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.7;
+                        transition: all .5ms ease-in;
+                    }
+                }
+
+                .nxt {
+                    margin-left: 1rem;
+                }
+
+            }
+        }
+
+        .suggestions {
+            width: 30%;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            background: #fff;
+
+            h3 {
+                font-family: monteserrat;
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+
+            a {
+                display: block;
+                margin-top: .5rem;
+                font-size: 1rem;
+                text-transform: capitalize;
+                font-family: monteserrat;
+                color: #000;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .singlePage {
+        .error {
+            font-size: 1rem;
+            
+        }
+
+        .back {
+
+            button {
+                height: 7rem;
+                width: 3rem;
+                font-size: .8rem;
+            }
+        }
+
+        .main {
+            .jokeBox {
+
+                .joke {
+
+                    .top {
+
+                        .category {
+                            font-size: .75rem;
+
+                            span {
+                                margin-right: .5rem;
+                            }
+                        }
+
+                        .trend {
+                            font-size: .75rem;
+                        }
+                    }
+
+                    .titleCon {
+
+                        .title {
+                            font-size: 1.7rem;
+                        }
+
+                        hr {
+                            width: 35%;
+                        }
+
+                        h5 {
+                            font-size: .75rem;
+                        }
+                    }
+
+                    .value {
+                        font-size: 1rem;
+                        line-height: 2;
+                    }
+                }
+
+                .action {
+
+                    .actionType {
+
+                        .like {
+
+                            button {
+                                width: 40px;
+                                height: 40px;
+
+                                img {
+                                    height: 1.2rem;
+                                    width: 1.2rem;
+                                }
+                            }
+
+                            h3 {
+                                font-size: .75rem;
+                            }
+                        }
+
+                        .unLike {
+
+                            button {
+                                width: 40px;
+                                height: 40px;
+
+                                img {
+                                    height: 1.2rem;
+                                    width: 1.2rem;
+                                }
+                            }
+
+                            h3 {
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+                }
+
+                .change {
+                    button {
+                        padding: 1.2rem 1.7rem;
+                        font-size: .8rem;
+
+                    }
+
+                    .nxt {
+                        margin-left: 1.2rem;
+                    }
+
+                }
+            }
+
+            .suggestions {
+
+                h3 {
+                    font-size: .8rem;
+                }
+
+                a {
+                    margin-top: .8rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .singlePage {
+        .main {
+            flex-direction: column;
+
+            .jokeBox {
+                width: 100%;
+            }
+
+            .suggestions {
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:639px) {
+    .singlePage {
+        .main {
+            .jokeBox {
+                width: 100%;
+
+                .joke {
+
+                    .titleCon {
+
+                        .title {
+                            font-size: 1.5rem;
+                        }
+
+                        hr {
+                            width: 10%;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:367px) {
+    .singlePage {
+        .main {
+            .jokeBox {
+
+                .joke {
+
+                    .titleCon {
+
+                        .title {
+                            font-size: 1.2rem;
+                        }
+
+                        hr {
+                            width: 10%;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}

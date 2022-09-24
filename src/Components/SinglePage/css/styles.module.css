@@ -1,0 +1,306 @@
+@font-face {
+  font-family: monteserrat;
+  src: url("../../../Fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: monteserratSemi;
+  src: url("../../../Fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+.singlePage {
+  margin: 2rem 0;
+}
+.singlePage .error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+  font-family: monteserrat;
+}
+.singlePage .back {
+  margin: 1rem 0;
+  position: relative;
+  display: block;
+}
+.singlePage .back button {
+  background: url("../blob.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10rem;
+  width: 4.5rem;
+  border: none;
+  color: #cfb995;
+  font-size: 1rem;
+}
+.singlePage .back button:hover {
+  opacity: 0.7;
+}
+.singlePage .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.singlePage .main .jokeBox {
+  width: 67%;
+}
+.singlePage .main .jokeBox .joke {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.singlePage .main .jokeBox .joke:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.singlePage .main .jokeBox .joke .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.singlePage .main .jokeBox .joke .top .category {
+  font-family: monteserrat;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: #57dbe6;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 15px;
+}
+.singlePage .main .jokeBox .joke .top .category span {
+  margin-right: 0.2rem;
+}
+.singlePage .main .jokeBox .joke .top .trend {
+  font-family: monteserrat;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #ff915b;
+}
+.singlePage .main .jokeBox .joke .titleCon {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+.singlePage .main .jokeBox .joke .titleCon .title {
+  font-family: monteserratSemi;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #d0ba93;
+}
+.singlePage .main .jokeBox .joke .titleCon hr {
+  width: 30%;
+  margin-left: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #d0ba93;
+}
+.singlePage .main .jokeBox .joke .titleCon h5 {
+  font-family: monteserrat;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #d0ba93;
+  margin-left: 0.5rem;
+}
+.singlePage .main .jokeBox .joke .value {
+  margin-top: 1rem;
+  font-family: monteserrat;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.singlePage .main .jokeBox .action {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.singlePage .main .jokeBox .action .actionType {
+  display: flex;
+  align-items: center;
+}
+.singlePage .main .jokeBox .action .actionType .like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.singlePage .main .jokeBox .action .actionType .like:hover {
+  opacity: 0.7;
+  transition: all 0.5ms ease-in;
+}
+.singlePage .main .jokeBox .action .actionType .like button {
+  border: none;
+  border-radius: 50%;
+  background: darkgreen;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+.singlePage .main .jokeBox .action .actionType .like button img {
+  height: 1.5rem;
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.singlePage .main .jokeBox .action .actionType .like h3 {
+  font-family: monteserrat;
+  font-size: 0.8rem;
+  color: darkgreen;
+}
+.singlePage .main .jokeBox .action .actionType .unLike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.singlePage .main .jokeBox .action .actionType .unLike button {
+  border: none;
+  border-radius: 50%;
+  background: red;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+.singlePage .main .jokeBox .action .actionType .unLike button img {
+  height: 1.5rem;
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: rotate(180deg);
+}
+.singlePage .main .jokeBox .action .actionType .unLike h3 {
+  font-family: monteserrat;
+  font-size: 0.8rem;
+  color: red;
+}
+.singlePage .main .jokeBox .change button {
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #cfb995;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.singlePage .main .jokeBox .change button:hover {
+  opacity: 0.7;
+  transition: all 0.5ms ease-in;
+}
+.singlePage .main .jokeBox .change .nxt {
+  margin-left: 1rem;
+}
+.singlePage .main .suggestions {
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background: #fff;
+}
+.singlePage .main .suggestions h3 {
+  font-family: monteserrat;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.singlePage .main .suggestions a {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: monteserrat;
+  color: #000;
+}
+
+@media screen and (max-width: 1024px) {
+  .singlePage .error {
+    font-size: 1rem;
+  }
+  .singlePage .back button {
+    height: 7rem;
+    width: 3rem;
+    font-size: 0.8rem;
+  }
+  .singlePage .main .jokeBox .joke .top .category {
+    font-size: 0.75rem;
+  }
+  .singlePage .main .jokeBox .joke .top .category span {
+    margin-right: 0.5rem;
+  }
+  .singlePage .main .jokeBox .joke .top .trend {
+    font-size: 0.75rem;
+  }
+  .singlePage .main .jokeBox .joke .titleCon .title {
+    font-size: 1.7rem;
+  }
+  .singlePage .main .jokeBox .joke .titleCon hr {
+    width: 35%;
+  }
+  .singlePage .main .jokeBox .joke .titleCon h5 {
+    font-size: 0.75rem;
+  }
+  .singlePage .main .jokeBox .joke .value {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  .singlePage .main .jokeBox .action .actionType .like button {
+    width: 40px;
+    height: 40px;
+  }
+  .singlePage .main .jokeBox .action .actionType .like button img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .singlePage .main .jokeBox .action .actionType .like h3 {
+    font-size: 0.75rem;
+  }
+  .singlePage .main .jokeBox .action .actionType .unLike button {
+    width: 40px;
+    height: 40px;
+  }
+  .singlePage .main .jokeBox .action .actionType .unLike button img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .singlePage .main .jokeBox .action .actionType .unLike h3 {
+    font-size: 0.75rem;
+  }
+  .singlePage .main .jokeBox .change button {
+    padding: 1.2rem 1.7rem;
+    font-size: 0.8rem;
+  }
+  .singlePage .main .jokeBox .change .nxt {
+    margin-left: 1.2rem;
+  }
+  .singlePage .main .suggestions h3 {
+    font-size: 0.8rem;
+  }
+  .singlePage .main .suggestions a {
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .singlePage .main {
+    flex-direction: column;
+  }
+  .singlePage .main .jokeBox {
+    width: 100%;
+  }
+  .singlePage .main .suggestions {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 639px) {
+  .singlePage .main .jokeBox {
+    width: 100%;
+  }
+  .singlePage .main .jokeBox .joke .titleCon .title {
+    font-size: 1.5rem;
+  }
+  .singlePage .main .jokeBox .joke .titleCon hr {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 367px) {
+  .singlePage .main .jokeBox .joke .titleCon .title {
+    font-size: 1.2rem;
+  }
+  .singlePage .main .jokeBox .joke .titleCon hr {
+    width: 10%;
+  }
+}/*# sourceMappingURL=styles.module.css.map */
