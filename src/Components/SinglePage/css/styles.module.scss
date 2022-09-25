@@ -246,7 +246,7 @@
     .singlePage {
         .error {
             font-size: 1rem;
-            
+
         }
 
         .back {
@@ -404,6 +404,24 @@
                         }
                     }
 
+
+
+                }
+
+                .action {
+                    flex-direction: column;
+
+                    .change {
+                        width: 100%;
+                        margin-top: 1rem;
+                        display: flex;
+                        justify-content: space-between;
+
+                        button {
+                            width: 48%;
+                            font-size: .75rem;
+                        }
+                    }
                 }
             }
 
@@ -417,16 +435,33 @@
             .jokeBox {
 
                 .joke {
+                    .top {
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        .category {
+                            font-size: .7rem;
+                        }
+
+                        .trend {
+                            margin-top: 1rem;
+                            font-size: .7rem;
+                        }
+                    }
 
                     .titleCon {
 
                         .title {
-                            font-size: 1.2rem;
+                            font-size: .8rem;
                         }
 
                         hr {
                             width: 10%;
                         }
+                    }
+
+                    .value {
+                        font-size: 0.7rem;
                     }
 
                 }

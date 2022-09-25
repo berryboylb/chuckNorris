@@ -36,7 +36,11 @@ const Index: React.FC<Props> = ({
 }) => {
   const navigate = useNavigate();
   const searchValidation = yup.object().shape({
-    query: yup.string().required("Category is required"),
+    query: yup
+      .string()
+      .min(3, "query must be at least 3")
+      .max(20, "Must not be greater than 20")
+      .required("Category is required"),
   });
   const [disabled, setDisabled] = useState<boolean>(false);
   const [toggleColor, setToggleColor] = useState<boolean>(false);

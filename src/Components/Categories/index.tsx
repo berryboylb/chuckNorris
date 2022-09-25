@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { categories, getJokesByCategories } from "../../actions";
+import { getData, getJokesByCategories } from "../../actions";
 import { connect } from "react-redux";
 import { GET_CATEGORIES } from "../../types";
 import PropTypes from "prop-types";
@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 type Props = {
   storecatogries: any;
-  categories: any;
+  getData: any;
   loading: true;
   getJokesByCategories: any;
   setData: any;
@@ -21,7 +21,7 @@ type Props = {
 
 const Index: React.FC<Props> = ({
   storecatogries,
-  categories,
+  getData,
   loading,
   getJokesByCategories,
   setData,
@@ -29,8 +29,8 @@ const Index: React.FC<Props> = ({
 }) => {
   const navigate = useNavigate();
   useEffect(() => {
-    categories("https://api.chucknorris.io/jokes/categories", GET_CATEGORIES);
-  }, [categories]);
+    getData("https://api.chucknorris.io/jokes/categories", GET_CATEGORIES);
+  }, [getData]);
   const [count, setCount] = useState<number>(7);
   const [loader, setLoader] = React.useState<boolean>(false);
   return (
@@ -99,7 +99,7 @@ const Index: React.FC<Props> = ({
               </div>
             ) : (
               <div>
-                <h1 className={Styles.error}>No categories for now :-(</h1>
+                <h1 className={Styles.error}>No Categories for now :-(</h1>
               </div>
             )}
           </>
@@ -110,7 +110,7 @@ const Index: React.FC<Props> = ({
 };
 
 Index.propTypes = {
-  categories: PropTypes.func.isRequired,
+  getData: PropTypes.func.isRequired,
   storecatogries: PropTypes.array.isRequired,
   getJokesByCategories: PropTypes.func.isRequired,
 };
@@ -121,6 +121,6 @@ const mapStateToProps = (state: any) => ({
 });
 
 export default connect(mapStateToProps, {
-  categories,
+  getData,
   getJokesByCategories,
 })(Index);

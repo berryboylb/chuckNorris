@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { categories, toggleJoke, getSuggestions } from "../../actions";
+import { getData, toggleJoke, getSuggestions } from "../../actions";
 import Spinner from "../Spinner";
 import Styles from "./css/styles.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,7 +24,7 @@ type Props = {
   singleJoke: Jokes;
   loading: boolean;
   suggestions: Jokes[];
-  categories: any;
+  getData: any;
   toggleJoke: any;
   getSuggestions: any;
   ourCategories: Category[];
@@ -44,20 +44,20 @@ const Index: React.FC<Props> = ({
   singleJoke,
   loading,
   suggestions,
-  categories,
+  getData,
   getSuggestions,
   ourCategories,
 }) => {
   const { id, index, category } = useParams();
   const navigate = useNavigate();
-  const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+  const [currentIndex, setCurrentIndex] = React.useState<number>(-1);
   const [backGroundColor, setBackgroundColor] = React.useState<string>("");
   const [counter, setCounter] = React.useState<Counter>({
     likes: 0,
     unlikes: 0,
   });
   React.useEffect(() => {
-    if (category === "Uncategorized") {
+    if (category === "Uncategorized" || category === "explicit") {
       getSuggestions(
         `https://api.chucknorris.io/jokes/search?query=all`,
         GET_SUGESSTIONS
@@ -74,9 +74,9 @@ const Index: React.FC<Props> = ({
         GET_SUGESSTIONS
       );
     }
-    categories(`https://api.chucknorris.io/jokes/${id}`, GET_SINGLE_JOKE);
+    getData(`https://api.chucknorris.io/jokes/${id}`, GET_SINGLE_JOKE);
     setCurrentIndex(Number(index));
-  }, [categories, id, index, getSuggestions, category, ourCategories]);
+  }, [getData, id, index, getSuggestions, category, ourCategories]);
 
   const captialize = useCallback((str: string) => {
     let strArry: string[] = str.split(/(\s+)/);
@@ -192,49 +192,56 @@ const Index: React.FC<Props> = ({
 
                     {suggestions && suggestions.length > 0 && (
                       <div className={Styles.change}>
-                        <button
-                          onClick={() => {
-                            navigate(
-                              `/${
-                                suggestions[Math.max(0, currentIndex - 1)].id
-                              }/${currentIndex - 1}/${
-                                suggestions[Math.max(0, currentIndex - 1)]
-                                  .categories.length
-                                  ? suggestions[Math.max(0, currentIndex - 1)]
-                                      .categories[0]
-                                  : "all"
-                              }`
-                            );
-                            setCurrentIndex(currentIndex - 1);
-                          }}
-                        >
-                          <FontAwesomeIcon
-                            icon={faChevronLeft}
-                            className={Styles.pointer}
-                          />
-                          Prev Joke
-                        </button>
-                        <button
-                          onClick={() => {
-                            navigate(
-                              `/${suggestions[currentIndex + 1].id}/${
-                                currentIndex + 1
-                              }/${
-                                suggestions[currentIndex + 1].categories.length
-                                  ? suggestions[currentIndex + 1].categories[0]
-                                  : "all"
-                              }`
-                            );
-                            setCurrentIndex(currentIndex + 1);
-                          }}
-                          className={Styles.nxt}
-                        >
-                          Next Joke
-                          <FontAwesomeIcon
-                            icon={faChevronRight}
-                            className={Styles.pointer}
-                          />
-                        </button>
+                        {currentIndex > 0 && (
+                          <button
+                            onClick={() => {
+                              navigate(
+                                `/${
+                                  suggestions[Math.max(0, currentIndex - 1)].id
+                                }/${currentIndex - 1}/${
+                                  suggestions[Math.max(0, currentIndex - 1)]
+                                    .categories.length
+                                    ? suggestions[Math.max(0, currentIndex - 1)]
+                                        .categories[0]
+                                    : "all"
+                                }`
+                              );
+                              setCurrentIndex(currentIndex - 1);
+                            }}
+                          >
+                            <FontAwesomeIcon
+                              icon={faChevronLeft}
+                              className={Styles.pointer}
+                            />
+                            Prev Joke
+                          </button>
+                        )}
+
+                        {suggestions.length > currentIndex && (
+                          <button
+                            onClick={() => {
+                              navigate(
+                                `/${suggestions[currentIndex + 1].id}/${
+                                  currentIndex + 1
+                                }/${
+                                  suggestions[currentIndex + 1].categories
+                                    .length
+                                    ? suggestions[currentIndex + 1]
+                                        .categories[0]
+                                    : "all"
+                                }`
+                              );
+                              setCurrentIndex(currentIndex + 1);
+                            }}
+                            className={Styles.nxt}
+                          >
+                            Next Joke
+                            <FontAwesomeIcon
+                              icon={faChevronRight}
+                              className={Styles.pointer}
+                            />
+                          </button>
+                        )}
                       </div>
                     )}
                   </div>
@@ -253,7 +260,7 @@ const Index: React.FC<Props> = ({
                                   <Link
                                     key={category}
                                     onClick={() =>
-                                      categories(
+                                      getData(
                                         `https://api.chucknorris.io/jokes/${item.id}`,
                                         GET_SINGLE_JOKE
                                       )
@@ -268,7 +275,7 @@ const Index: React.FC<Props> = ({
                               <Link
                                 key={item.id}
                                 onClick={() =>
-                                  categories(
+                                  getData(
                                     `https://api.chucknorris.io/jokes/${item.id}`,
                                     GET_SINGLE_JOKE
                                   )
@@ -308,7 +315,7 @@ const mapStateToProps = (state: any) => ({
 });
 
 export default connect(mapStateToProps, {
-  categories,
+  getData,
   toggleJoke,
   getSuggestions,
 })(Index);

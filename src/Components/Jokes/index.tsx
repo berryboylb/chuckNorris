@@ -17,7 +17,6 @@ type Props = {
     background: string;
   };
 };
-
 type Jokes = {
   categories: string[];
   created_at: string;
@@ -27,7 +26,12 @@ type Jokes = {
   url: string;
   value: string;
 };
-const Index: React.FC<Props> = ({ jokes, loading, getAllJokes, data }) => {
+const Index: React.FC<Props> = ({
+  jokes,
+  loading,
+  getAllJokes,
+  data,
+}) => {
   React.useEffect(() => {
     getAllJokes(
       "https://api.chucknorris.io/jokes/search?query=all",
@@ -97,7 +101,8 @@ const Index: React.FC<Props> = ({ jokes, loading, getAllJokes, data }) => {
                       </>
                     ) : (
                       <>
-                        <Link
+                          <Link
+                            key={item.id}
                           className={Styles.link}
                           to={`/${item.id}/${index}/Uncategorized`}
                         >

@@ -54,6 +54,7 @@ export const getJokesByCategories =
     } catch (err: any) {
       cb("");
       console.log(err.message);
+      console.log(err.response.data);
       if (err.response.data) {
         toast.error(
           `${err.response.data.statusCode} ${err.response.data.message}`
@@ -66,7 +67,7 @@ export const getJokesByCategories =
     }
   };
 
-export const categories =
+export const getData =
   (url: string, type: string) =>
   async (dispatch: Dispatch): Promise<any> => {
     dispatch({
@@ -80,6 +81,7 @@ export const categories =
       });
     } catch (err: any) {
       console.log(err.message);
+      console.log(err.response.data);
       if (err.response.data) {
         toast.error(
           `${err.response.data.statusCode} ${err.response.data.message}`
